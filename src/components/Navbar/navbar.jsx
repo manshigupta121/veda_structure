@@ -21,6 +21,16 @@ const Menu = [
     id: 3,
     title: "Contact",
     link: "/contact"
+  },
+  {
+    id: 4,
+    title: "Astrology Courses",
+    link: "/astrology-courses"
+  },
+  {
+    id: 5,
+    title: "Article",
+    link: "/article"
   }
 ];
 
@@ -165,9 +175,17 @@ const DropdownLinks3 = [
 
 const Navbar = () => {
   return (
+
+      
+    
     <div className='shadow-md bg-white dark:bg-gray-900 dark:text-white duration-200 relative z-40'>
+
+      <div className='text-white px-4 bg-yellow-400 w-[100%]'>
+        <h5 className='text-center text-xsm text-bold'>LIMITED TIME OFFER: 30% OFF. Use RABBIT30 at checkout <span><time datetime="hh:mm:ss"></time></span></h5>
+      </div>
+
       {/*upperNav*/} 
-      <div className='bg-yellow-500/40 py-3'>
+      <div className='bg-white py-2'>
         <div className='container flex justify-between items-center'>
           <div>
             <a href="#" className="font-bold text-3xl sm:text-3xl flex gap-2">
@@ -175,18 +193,19 @@ const Navbar = () => {
               
             </a>
           </div>
+          <div className='flex items-center justify-between '>
           {/* search Bar */}
-          <div className='flex'>
-            <div className='relative group hidden sm:block mr-2'>
-            <input type="text" placeholder="Search..." className='bg-gray-100 w-[200px] sm:w-[200px]  group-hover:w-[300px] transition-all duration-300 rounded-full border-gray-300 px-2 py-1 focus:outline-none focus:border-1 focus:border-orange-400' />
+          <div className='flex '>
+            <div className='relative group hidden sm:block mr-100'>
+            <input type="text" placeholder="Search..." className='bg-[#f3bd10]/20 w-[200px] sm:w-[200px]  group-hover:w-[300px] transition-all duration-300 rounded-full border-2 border-yellow-500/50 px-2 py-1 focus:outline-none focus:border-1 focus:border-orange-400' />
             <IoMdSearch 
-            className='text-gray-500 group-hover:text-orange-400 absolute top-1/2 -translate-y-1/2 right-3 '
+            className='text-yellow-500/60 group-hover:text-white absolute top-1/2 -translate-y-1/2 right-3 '
             />
             </div>
             {/* order button */}
             <button
               onClick={() => handleOrderPopup()}
-              className="bg-gradient-to-r from-orange-500 to-secondary transition-all duration-200 text-white  py-1 px-4 rounded-full flex items-center gap-3 group"
+              className="bg-gradient-to-r from-[#f3bd10] to-secondary transition-all duration-200 text-white  py-1 px-4 rounded-full flex items-center gap-3 group"
             >
               <span className="group-hover:block hidden transition-all duration-200">
                 Order
@@ -194,15 +213,16 @@ const Navbar = () => {
               <FaCartShopping className="text-xl text-white drop-shadow-sm cursor-pointer" />
             </button>
           </div>
+          </div>
         </div>
       </div>
       {/*lowerNav*/} 
-      <div className='flex justify-center'>
+      <div className='flex justify-center bg-[#f3bd10] text-white'>
         <ul className='sm:flex hidden items-center gap-4'>
           {Menu.map(data=>(
             <li key={data.id}>
               <a href={data.link}
-              className='inline-block px-4 hover:text-orange-400 duration-200'
+              className='inline-block px-4 hover:text-yellow-700 duration-200'
               ><h1>{data.title}</h1>
               </a>
             </li>
@@ -212,7 +232,7 @@ const Navbar = () => {
           {/*PUJA-DROPDOWN*/}
 
           <li className='group relative cursor-pointer'>
-            <a href="#" className='flex items-center gap-[2px] py-2'>Puja
+            <a href="#" className='flex items-center gap-[2px] py-2 hover:text-yellow-700'>Puja
               <span>
                 <FaCaretDown className='transition-all duration-200 group-hover:rotate-180' />
               </span>
@@ -222,7 +242,7 @@ const Navbar = () => {
               {DropdownLinks1.map(data=>(
                 <li key={data.id}>
                   <a href={data.link}
-                  className='inline-block w-full rounded-md p-2 hover:bg-orange-100 hover:text-orange-400'
+                  className='inline-block w-full rounded-md p-2 hover:bg-[#f3bd10]/10 hover:text-[#f3bd10]'
                   >{data.title}</a>
                 </li>
               ))}
@@ -233,7 +253,7 @@ const Navbar = () => {
           {/*ASTRO_REPORT-DROPDOWN*/}
 
           <li className='group relative cursor-pointer'>
-            <a href="#" className='flex items-center gap-[2px] py-2'>Astro Report
+            <a href="#" className='flex items-center gap-[2px] py-2 hover:text-yellow-700'>Astro Report
               <span>
                 <FaCaretDown className='transition-all duration-200 group-hover:rotate-180' />
               </span>
@@ -243,7 +263,7 @@ const Navbar = () => {
               {DropdownLinks2.map(data=>(
                 <li key={data.id}>
                   <a href={data.link}
-                  className='inline-block w-full rounded-md p-2 hover:bg-orange-100 hover:text-orange-400'
+                  className='inline-block w-full rounded-md p-2 hover:bg-[#f3bd10]/10 hover:text-[#f3bd10]'
                   >{data.title}</a>
                 </li>
               ))}
@@ -255,7 +275,7 @@ const Navbar = () => {
            {/*VEDA_STORE-DROPDOWN*/}  
 
           <li className='group relative cursor-pointer'>
-            <a href="#" className='flex items-center gap-[2px] py-2'>Veda Store
+            <a href="#" className='flex items-center gap-[2px] py-2 hover:text-yellow-700'>Veda Store
               <span>
                 <FaCaretDown className='transition-all duration-200 group-hover:rotate-180' />
               </span>
@@ -265,7 +285,7 @@ const Navbar = () => {
               {DropdownLinks3.map(data=>(
                 <li key={data.id}>
                   <a href={data.link}
-                  className='inline-block w-full rounded-md p-2 hover:bg-orange-100 hover:text-orange-400'
+                  className='inline-block w-full rounded-md p-2 hover:bg-[#f3bd10]/10 hover:text-[#f3bd10]'
                   >{data.title}</a>
                 </li>
               ))}

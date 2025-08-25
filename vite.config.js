@@ -18,7 +18,10 @@ export default defineConfig({
           DEFAULT: '1rem',
           sm: '3rem',
         }
-      }
+      },
+      boxShadow: {
+        'all-side': '0 0 15px rgba(0.2, 0.2, 0.2, 0.2)',
+      },
     },
     plugins: [],
   },

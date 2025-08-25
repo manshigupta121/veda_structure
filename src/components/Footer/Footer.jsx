@@ -1,119 +1,72 @@
-import React from "react";
-import footerLogo from "../../assets/logo.png";
-
-import {
-  FaFacebook,
-  FaInstagram,
-  FaLinkedin,
-  FaLocationArrow,
-  FaMobileAlt,
-} from "react-icons/fa";
-
-
-
-const FooterLinks = [
-  {
-    title: "Home",
-    link: "/#",
-  },
-  {
-    title: "About",
-    link: "/#about",
-  },
-  {
-    title: "Contact",
-    link: "/#contact",
-  },
-  {
-    title: "Blog",
-    link: "/#blog",
-  },
-];
+import React from 'react'
+import logo from '../../assets/logo.png'
 
 const Footer = () => {
   return (
-    <div>
-      <div className="container">
-        <div data-aos="zoom-in" className="grid md:grid-cols-3 pb-44 pt-5">
-          {/* company details */}
-          <div className="py-8 px-4">
-            <h1 className="sm:text-3xl text-xl font-bold sm:text-left text-justify mb-3 flex items-center gap-3">
-              <img src={footerLogo} alt="" className="max-w-[50px]" />
-              Shopsy
-            </h1>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum in
-              beatae ea recusandae blanditiis veritatis.
-            </p>
-          </div>
+    <footer className="bg-gray-800 text-white py-4 md:py-8 md:flex-col">
 
-          {/* Footer Links */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 col-span-2 md:pl-10">
-            <div>
-              <div className="py-8 px-4">
-                <h1 className="sm:text-xl text-xl font-bold sm:text-left text-justify mb-3">
-                  Important Links
-                </h1>
-                <ul className="flex flex-col gap-3">
-                  {FooterLinks.map((link) => (
-                    <li
-                      className="cursor-pointer hover:text-primary hover:translate-x-1 duration-300 text-gray-200"
-                      key={link.title}
-                    >
-                      <span>{link.title}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-            <div>
-              <div className="py-8 px-4">
-                <h1 className="sm:text-xl text-xl font-bold sm:text-left text-justify mb-3">
-                  Links
-                </h1>
-                <ul className="flex flex-col gap-3">
-                  {FooterLinks.map((link) => (
-                    <li
-                      className="cursor-pointer hover:text-primary hover:translate-x-1 duration-300 text-gray-200"
-                      key={link.title}
-                    >
-                      <span>{link.title}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
+     <div className='w-[80%] mx-auto'>
 
-            {/* social links */}
+    <div className="container mx-auto flex flex-row justify-between">
+      <div className='flex flex-col'>
+        <h1 className='text-lg font-semibold'>Subscribe to our Newsletter</h1>
+        <p className='text-sm'>Get the latest updates and offers directly in your inbox.</p>
+      </div>
 
-            <div>
-              <div className="flex items-center gap-3 mt-6">
-                <a href="#">
-                  <FaInstagram className="text-3xl" />
-                </a>
-                <a href="#">
-                  <FaFacebook className="text-3xl" />
-                </a>
-                <a href="#">
-                  <FaLinkedin className="text-3xl" />
-                </a>
-              </div>
-              <div className="mt-6">
-                <div className="flex items-center gap-3">
-                  <FaLocationArrow />
-                  <p>Noida, Uttar Pradesh</p>
-                </div>
-                <div className="flex items-center gap-3 mt-3">
-                  <FaMobileAlt />
-                  <p>+91 123456789</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div>
+        <input type="email" placeholder="Enter your Email" className="p-2 rounded-full bg-white text-gray-600"/>
+        <button className='bg-yellow-500 text-white py-2 px-4 rounded-full'>
+          Subscribe
+        </button>
       </div>
     </div>
-  );
-};
 
-export default Footer;
+    <hr  className='my-4 border-gray-600 w-[100%] mx-auto justify-center'/>
+
+    <div className='grid grid-cols-1 md:grid-cols-4 gap-8 text-center md:text-left py-8 px-4 md:px-0 container mx-auto'>
+      <div className='flex flex-col items-center '>
+        <img src={logo} alt="Logo" className="mx-auto mb-2 w-50" />
+        <p className='text-sm'>Veda Structure is your one-stop destination for all spiritual needs, offering authentic rituals, astrology services, and sacred items to enhance your spiritual journey.</p>
+      </div>
+      <div>
+        <h2 className='text-lg font-semibold'>Quick Links</h2>
+        <ul className='text-sm'>
+          <li><a href="#book-puja" className='hover:underline'>Book Puja</a></li>
+          <li><a href="#blog-article" className='hover:underline'>Blog | Article</a></li>
+          <li><a href="#services" className='hover:underline'>Veda Store</a></li>
+          <li><a href="#spiritual-blog" className='hover:underline'>Spiritual Blog</a></li>
+          <li><a href="#about-us" className='hover:underline'>About Us</a></li>
+          <li><a href="#contact-us" className='hover:underline'>Contact Us</a></li>
+        </ul>
+      </div>
+
+        <div>
+        <h2 className='text-lg font-semibold'>Quick Links</h2>
+        <ul className='text-sm'>
+          <li><a href="#book-puja" className='hover:underline'>Privacy Policy</a></li>
+          <li><a href="#blog-article" className='hover:underline'>Terms & Conditions</a></li>
+          <li><a href="#services" className='hover:underline'>Refund Policy</a></li>
+          <li><a href="#spiritual-blog" className='hover:underline'>Become a Astrologer</a></li>
+          <li><a href="#about-us" className='hover:underline'>Astrologer Login</a></li>
+          
+        </ul>
+      </div>
+
+      <div>
+        <h2 className='text-lg font-semibold'>Follow Us</h2>
+        <p className='text-sm'>Stay connected through our social media channels.</p>
+      </div>
+    </div>
+
+    <hr className='my-4 border-gray-600 w-[100%] mx-auto justify-center' />
+
+    <div className='py-4 text-center'>
+      <p className='text-sm'>© 2023 Veda Structure. All rights reserved.</p>
+    </div>
+
+    </div>
+  </footer>
+  )
+}
+
+export default Footer

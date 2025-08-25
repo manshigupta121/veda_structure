@@ -25,18 +25,18 @@ function ProductPage() {
 
         <div className='flex flex-col justify-between lg:flex-row gap-16 lg:items-center'>
             <div className='flex flex-col gap-6 lg:w-2/4'>
-                <img src={activeImg} alt="" className='w-full h-full aspect-square object-cover rounded-xl' />
-                <div className='flex flex-row justify-between h-24'>
-                    <img src={images.ekMukhi1} alt="" className='w-24 h-24 rounded-md cursor-pointer' onClick={() => setActiveImage(images.ekMukhi1)} />
-                    <img src={images.ekMukhi2} alt="" className='w-24 h-24 rounded-md cursor-pointer' onClick={() => setActiveImage(images.ekMukhi2)} />
-                    <img src={images.ekMukhi3} alt="" className='w-24 h-24 rounded-md cursor-pointer' onClick={() => setActiveImage(images.ekMukhi3)} />
-                    <img src={images.ekMukhi4} alt="" className='w-24 h-24 rounded-md cursor-pointer' onClick={() => setActiveImage(images.ekMukhi4)} />
+                <img src={activeImg} alt="" className='w-[80%] h-[80%] aspect-square object-cover hover:p-3 hover:border-2 hover:shadow-2xl  hover:border-yellow-400' />
+                <div className='flex flex-row justify-between h-24 w-full lg:w-3/4'>
+                    <img src={images.ekMukhi1} alt="" className='w-24 h-24  cursor-pointer hover:p-3 hover:border-2 hover:shadow-2xl  hover:border-yellow-400' onMouseEnter={() => setActiveImage(images.ekMukhi1)} />
+                    <img src={images.ekMukhi2} alt="" className='w-24 h-24  cursor-pointer hover:p-3 hover:border-2 hover:shadow-2xl  hover:border-yellow-400' onMouseEnter={() => setActiveImage(images.ekMukhi2)} />
+                    <img src={images.ekMukhi3} alt="" className='w-24 h-24  cursor-pointer hover:p-3 hover:border-2 hover:shadow-2xl  hover:border-yellow-400' onMouseEnter={() => setActiveImage(images.ekMukhi3)} />
+                    <img src={images.ekMukhi4} alt="" className='w-24 h-24  cursor-pointer hover:p-3 hover:border-2 hover:shadow-2xl  hover:border-yellow-400' onMouseEnter={() => setActiveImage(images.ekMukhi4)} />
                 </div>
             </div>
             {/* ABOUT */}
             <div className='flex flex-col gap-4 lg:w-2/4'>
                 <div>
-                    <span className=' text-orange-600 font-semibold'>Special Rudaraksha</span>
+                    <span className=' text-yellow-500 font-semibold'>Special Rudaraksha</span>
                     <h1 className='text-3xl font-bold'>1 Mukhi Rudraksha </h1>
                 </div>
                 <p className='text-gray-700'>
@@ -50,7 +50,7 @@ function ProductPage() {
                         <span className='py-4 px-6 rounded-lg'>{amount}</span>
                         <button className='bg-gray-200 py-2 px-4 rounded-lg text-orange-600 text-3xl' onClick={() => setAmount((prev) => prev + 1)}>+</button>
                     </div>
-                    <button className='bg-orange-600 text-white font-semibold py-3 px-16 rounded-xl h-full'>Add to Cart</button>
+                    <button className='bg-yellow-400 text-white font-semibold py-3 px-16 rounded-xl h-full'>Add to Cart</button>
                 </div>
             </div>
         </div>

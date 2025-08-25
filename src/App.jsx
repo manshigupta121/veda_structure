@@ -6,6 +6,10 @@ import Products from './components/Products/products'
 import ProductPage from './components/ProductPage/ProductPage'
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Accordion from './components/Accordion/Accordion'
+import Footer from './components/Footer/Footer'
+import Collapsible from './components/Collapsible/Collapsible'
+import CollapsibleSection from './components/Collapsible/Collapsible'
 
 const App = () => {
 
@@ -23,9 +27,11 @@ const App = () => {
    <div>
     <Navbar/>
     <Hero/>
+    <Accordion/>
     <Products/>
     <ProductPage/>
-    
+    <CollapsibleSection/>
+    <Footer />
    </div>
   )
 }

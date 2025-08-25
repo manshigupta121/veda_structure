@@ -2,6 +2,7 @@ import React from "react";
 import hero_r1 from "../../assets/hero_images/hero_r1.png";
 import hero_r2 from "../../assets/hero_images/hero_r2.png";
 import hero_r3 from "../../assets/hero_images/hero_r3.png";
+import mandala from "../../assets/mandala.png";
 import Slider from "react-slick";
 
 const ImageList = [
@@ -43,9 +44,16 @@ const Hero = ({ handleOrderPopup }) => {
   };
 
   return (
-    <div className="relative overflow-hidden min-h-[550px] sm:min-h-[650px] bg-yellow-100 flex justify-center items-center dark:bg-gray-950 dark:text-white duration-200 ">
+    <div className="relative overflow-hidden min-h-[550px] sm:min-h-[650px] bg-yellow-500/20 flex justify-center items-center dark:bg-gray-950 dark:text-white duration-200 ">
       {/* background pattern */}
-      <div className="h-[700px] w-[700px] bg-orange-500/40 absolute -top-1/2 right-0 rounded-3xl rotate-45 -z[8]"></div>
+      <div>
+        <img
+          src={mandala}
+          alt="Mandala pattern with intricate circular designs, radiating a sense of calm and spirituality. The pattern is set against a soft yellow background, creating a peaceful and inviting atmosphere."
+          className=" h-[700px] w-[700px] -top-1/2 right-0 rounded-3xl rotate-45 -z-[8] animate-spin [animation-duration:25s] absolute"
+        />
+      </div>
+      {/*<div className="h-[700px] w-[700px] bg-orange-500/40 absolute -top-1/2 right-0 rounded-3xl rotate-45 -z[8]"></div>*/}
       {/* hero section */}
       <div className="container pb-8 sm:pb-0">
         <Slider {...settings}>
@@ -58,7 +66,7 @@ const Hero = ({ handleOrderPopup }) => {
                     data-aos="zoom-out"
                     data-aos-duration="500"
                     data-aos-once="true"
-                    className="text-5xl sm:text-6xl lg:text-7xl font-bold"
+                    className="text-5xl sm:text-6xl lg:text-7xl font-bold text-red-950/85"
                   >
                     {data.title}
                   </h1>
@@ -66,7 +74,7 @@ const Hero = ({ handleOrderPopup }) => {
                     data-aos="fade-up"
                     data-aos-duration="500"
                     data-aos-delay="100"
-                    className="text-sm"
+                    className="text-lg text-yellow-800"
                   >
                     {data.description}
                   </p>
@@ -77,7 +85,7 @@ const Hero = ({ handleOrderPopup }) => {
                   >
                     <button
                       onClick={handleOrderPopup}
-                      className="bg-gradient-to-r from-primary to-secondary hover:scale-105 duration-200 text-white py-2 px-4 rounded-full"
+                      className="bg-gradient-to-r from-primary to-secondary hover:scale-105 duration-200 text-yellow-600 py-2 px-4 rounded-full hover:bg-yellow-400"
                     >
                       Order Now
                     </button>
